@@ -1,0 +1,39 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+import { getAuth, signInWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAe-kf5DDB1lDJ_Uj_Ti7LugddLZizmGqw",
+    authDomain: "cvwizard2.firebaseapp.com",
+    projectId: "cvwizard2",
+    storageBucket: "cvwizard2.firebasestorage.app",
+    messagingSenderId: "717790196614",
+    appId: "1:717790196614:web:c947e1893b3c0deee83207"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const submit = document.getElementById('signup-form');
+submit.addEventListener("submit",  function (event) {
+    event.preventDefault();
+
+    const gmail = document.getElementById('gmail').value;
+    const password = document.getElementById('password').value;
+
+    try {
+        signInWithEmailAndPassword(auth, gmail, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log("User signed up successfully:", user);
+                alert("Sign-up successful!");
+                window.location.href = "./main.html";
+            })
+            .catch((error) => {
+                console.error("Error during sign-up:", error.code, error.message);
+                alert(`Error: ${error.message}`);
+            });
+    } catch (error) {
+        console.error("Error during sign-up:", error.code, error.message);
+        alert(`Error: ${error.message}`);
+    }
+});
+
