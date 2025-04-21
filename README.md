@@ -57,10 +57,7 @@ Config.js consists of the API keys needed for the project to run.
 
 Click this link to install the specific node_modules -> https://drive.google.com/file/d/1LXzc_-iDYy5N4f0FIJFJgHACwDmZfdz2/view?usp=drive_link
 specific files were tailored for the text scraping to work correctly
-### Run Locally
 
-
----
 
 ## 🧪 Usage
 
@@ -116,6 +113,6 @@ Contributions are welcome! Please follow these steps:
 ## 📬 Contact
 
 **Tishawn Joseph**  
-🔗 [LinkedIn](https://www.linkedin.com/Tishawn_joseph)  
+🔗 [LinkedIn](https://www.linkedin.com/in/tishawn-joseph/)  
 📧 tishawnjoseph16@gmail.com
 💼 Aspiring Cybersecurity Engineer 
